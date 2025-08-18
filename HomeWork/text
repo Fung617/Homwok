@@ -1,0 +1,14 @@
+your-project/
+├── index.html
+├── css/
+│   └── css/home.css
+├── img/
+│   ├── JP/jpn.jpg
+│   ├── Paris/Paris.jpg
+│   ├── Rome/rome.jpg
+│   ├── TH/bangkok.jpg
+│   ├── logo2.png
+│   ├── menu-btn.png
+│   └── fallback.jpg
+├── vo/
+│   └── traveler1-vmake.mp4

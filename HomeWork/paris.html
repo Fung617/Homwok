@@ -1,133 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paris, France | Adventube</title>
-    <link rel="stylesheet" href="css/homewrk2.css" />
-    <style>
-        .destination-header {
-            width: 100%;
-            height: 70vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/paris-banner.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            margin-bottom: 50px;
-        }
-        .destination-header h1 {
-            font-size: 4rem;
-        }
-        .destination-content {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .place-card {
-            margin: 30px 0;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        .place-card img {
-            width: 40%;
-            border-radius: 10px;
-        }
-        .place-info {
-            width: 60%;
-        }
-        @media only screen and (max-width: 850px) {
-            .place-card {
-                flex-direction: column;
-            }
-            .place-card img, .place-info {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>法國巴黎 | 環球旅遊探索</title>
+    <link rel="stylesheet" href="/css/css/paris.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- ================= 導航欄 ================= -->
     <nav class="navbar">
-        <h1 class="logo">ADVENTUBE</h1>
+        <a href="index.html" class="logo-container">
+            <img src="/img/logo2.png" alt="環球旅遊探索" class="header-logo">
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="kyoto.html">Kyoto</a></li>
-            <li class="active"><a href="paris.html">Paris</a></li>
-            <li><a href="machu-picchu.html">Machu Picchu</a></li>
-            <li><a href="cairo.html">Cairo</a></li>
-            <li class="ctn"><a href="#contact">Contact</a></li>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="kyoto.html">日本京都</a></li>
+            <li><a href="paris.html">法國巴黎</a></li>
+            <li><a href="rome.html">意大利羅馬</a></li>
+            <li><a href="bangkok.html">泰國曼谷</a></li>
+            <li><a href="#contact">聯絡我哋</a></li>
         </ul>
-        <img src="./img/menu-btn.png" alt="Menu button" class="menu-btn">
+        <button class="menu-btn">
+            <img src="/img/menu-btn.png" alt="Menu" class="menu-icon">
+        </button>
     </nav>
 
-    <!-- Destination Header -->
-    <div class="destination-header">
-        <div>
-            <h1>Paris, France</h1>
-            <p>The City of Light</p>
+    <!-- 主視覺區 -->
+    <header class="paris-header">
+        <video autoplay muted loop playsinline class="header-video">
+            <source src="/img/Paris/Parisvo.mp4" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <h2>浪漫之都</h2>
+            <div class="line"></div>
+            <h1>法國巴黎</h1>
+            <a href="#attractions" class="ctn">探索景點</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Destination Content -->
-    <div class="destination-content">
-        <section>
-            <h2>About Paris</h2>
-            <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its picturesque 19th-century cityscape is crisscrossed by wide boulevards and the River Seine, with landmarks like the Eiffel Tower and Gothic Notre-Dame cathedral.</p>
-        </section>
-
-        <section>
-            <h2>Top Attractions</h2>
-            
-            <div class="place-card">
-                <img src="./img/paris-eiffel.jpg" alt="Eiffel Tower">
-                <div class="place-info">
-                    <h3>Eiffel Tower</h3>
-                    <p>The iconic iron tower built by Gustave Eiffel for the 1889 World's Fair. At 324 meters tall, it offers stunning views of the city from its three observation decks. At night, the tower sparkles with thousands of lights for five minutes every hour.</p>
+    <!-- 關於巴黎 -->
+    <section class="about-section" id="attractions">
+        <div class="title">
+            <h1 class="title-text">巴黎物語</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col content-col">
+                <p>巴黎，法國嘅文化同藝術中心，擁有無數世界級博物館同地標建築。從羅浮宮到艾菲爾鐵塔，呢座城市充滿浪漫同歷史氣息，吸引全球遊客。</p>
+                <p>巴黎四季各有風情：春天花園盛放，夏天塞納河畔充滿生機，秋天落葉飄香，冬天燈飾閃耀，聖誕市集熱鬧非凡。</p>
+                <div id="history-info" class="history-info-box">
+                    <h3 id="history-title">景點歷史介紹</h3>
+                    <p id="history-content">請點擊右方圖片查看詳細歷史介紹</p>
+                </div>
+                <a href="#culture" class="ctn">了解文化</a>
+            </div>
+            <div class="col image-col">
+                <div class="paris-gallery">
+                    <div class="paris-image" onclick="showHistory('艾菲爾鐵塔', '艾菲爾鐵塔建於1889年，為巴黎世界博覽會而建，高324米，係法國嘅象徵。最初被批評外觀怪異，但今成為全球最著名地標之一。')">
+                        <img src="/img/Paris/Paris02.jpg" alt="艾菲爾鐵塔" class="rounded-corner">
+                        <div class="image-caption">艾菲爾鐵塔</div>
+                    </div>
+                    <div class="paris-image" onclick="showHistory('羅浮宮', '羅浮宮始建於12世紀，最初係堡壘，後改為皇家宮殿，1793年成為博物館。藏品包括《蒙娜麗莎》同《米洛嘅維納斯》，係世界最大藝術博物館之一。')">
+                        <img src="/img/Paris/羅浮宮.jpg" alt="羅浮宮" class="rounded-corner">
+                        <div class="image-caption">羅浮宮</div>
+                    </div>
+                    <div class="paris-image" onclick="showHistory('聖母院', '巴黎聖母院建於1163年至1345年，係哥德式建築嘅代表作。2019年大火後正在修復，依然係巴黎嘅文化地標。')">
+                        <img src="/img/Paris/聖母院.jpeg" alt="聖母院" class="rounded-corner">
+                        <div class="image-caption">聖母院</div>
+                    </div>
+                    <div class="paris-image" onclick="showHistory('凱旋門', '凱旋門建於1806年至1836年，為紀念拿破崙嘅勝利而建，位於香榭麗舍大道盡頭，高50米，係巴黎嘅標誌性建築。')">
+                        <img src="/img/Paris/凱旋門.jpeg" alt="凱旋門" class="rounded-corner">
+                        <div class="image-caption">凱旋門</div>
+                    </div>
+                    <div class="paris-image" onclick="showHistory('蒙馬特高地', '蒙馬特高地以聖心大教堂同藝術家聚集地聞名，19世紀係巴黎波希米亞文化中心，吸引畢加索等藝術家居住創作。')">
+                        <img src="/img/Paris/蒙馬特高地.jpg" alt="蒙馬特高地" class="rounded-corner">
+                        <div class="image-caption">蒙馬特高地</div>
+                    </div>
+                    <div class="paris-image" onclick="showHistory('塞納河', '塞納河貫穿巴黎，分隔南北城區，沿岸有37座歷史悠久嘅橋樑。乘船遊河可欣賞巴黎嘅經典景觀。')">
+                        <img src="/img/Paris/塞納河.jpeg" alt="塞納河" class="rounded-corner">
+                        <div class="image-caption">塞納河</div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="place-card">
-                <img src="./img/paris-louvre.jpg" alt="Louvre Museum">
-                <div class="place-info">
-                    <h3>Louvre Museum</h3>
-                    <p>The world's largest art museum and a historic monument in Paris. Home to thousands of works from antiquity to the 19th century, including Leonardo da Vinci's Mona Lisa and the Venus de Milo sculpture.</p>
-                </div>
-            </div>
-            
-            <div class="place-card">
-                <img src="./img/paris-notre-dame.jpg" alt="Notre-Dame Cathedral">
-                <div class="place-info">
-                    <h3>Notre-Dame Cathedral</h3>
-                    <p>A masterpiece of French Gothic architecture, famous for its size, antiquity, and architectural interest. Construction began in 1163 and was largely completed by 1260. The cathedral is currently undergoing restoration after the 2019 fire.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Travel Tips</h2>
-            <div class="row">
-                <div class="col">
-                    <h4>Best Time to Visit</h4>
-                    <p>April-June and September-October offer pleasant weather and fewer crowds. July-August is peak season with warm weather but larger crowds.</p>
-                </div>
-                <div class="col">
-                    <h4>Getting Around</h4>
-                    <p>Paris has an excellent metro system. Consider purchasing a Paris Visite travel card or a carnet of 10 single tickets for convenience.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <section id="contact" class="footer">
-        <p>123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com</p>
-        <p>Copyright &copy; 2025 Outdoor Adventure</p>
+        </div>
     </section>
 
-    <script src="js/homework.js"></script>
+    <!-- 文化體驗 -->
+    <section class="culture-section" id="culture">
+        <div class="title">
+            <h1>文化體驗</h1>
+            <div class="line"></div>
+        </div>
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/Paris/葡萄酒品嚐.jpg" alt="葡萄酒品嚐" class="rounded-corner">
+                </div>
+                <h3>葡萄酒品嚐</h3>
+                <p>喺巴黎嘅酒窖體驗正宗法國葡萄酒，學習品酒技巧。</p>
+                <a href="https://www.getyourguide.com/paris-l16/wine-tasting-tc-l1359/" class="ctn-small" target="_blank">查看預約</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/Paris/法國料理課.jpg" alt="法國料理課" class="rounded-corner">
+                </div>
+                <h3>法國料理課</h3>
+                <p>跟名廚學習製作法國經典菜式，如法式洋蔥湯同可麗餅。</p>
+                <a href="https://www.cooknwithclass.com/paris-cooking-classes/" class="ctn-small" target="_blank">查看預約</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/Paris/香水工作坊.jpg" alt="香水工作坊" class="rounded-corner">
+                </div>
+                <h3>香水工作坊</h3>
+                <p>喺香水之都巴黎，親手調配屬於你嘅獨特香水。</p>
+                <a href="https://www.fragonard.com/en/workshops" class="ctn-small" target="_blank">立即報名</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/Paris/塞納河夜遊.jpg" alt="塞納河夜遊" class="rounded-corner">
+                </div>
+                <h3>塞納河夜遊</h3>
+                <p>乘船夜遊塞納河，欣賞巴黎燈火輝煌嘅浪漫夜景。</p>
+                <a href="https://www.bateauxparisiens.com/en/" class="ctn-small" target="_blank">首推夜景</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 景點地圖 -->
+    <section class="map-section">
+        <div class="title">
+            <h1>景點地圖</h1>
+            <div class="line"></div>
+            <p>點擊標記查看景點資訊</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.94722637945!2d2.2770209!3d48.85883795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C%20France!5e0!3m2!1szh-TW!2shk!4v1620000000000!5m2!1szh-TW!2shk" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+            <div class="custom-markers">
+                <div class="marker" style="top: 40%; left: 45%;" data-title="艾菲爾鐵塔">
+                    <div class="pin pulse"></div>
+                    <div class="info">艾菲爾鐵塔</div>
+                </div>
+                <div class="marker" style="top: 50%; left: 50%;" data-title="羅浮宮">
+                    <div class="pin pulse"></div>
+                    <div class="info">羅浮宮</div>
+                </div>
+                <div class="marker" style="top: 45%; left: 55%;" data-title="聖母院">
+                    <div class="pin"></div>
+                    <div class="info">聖母院</div>
+                </div>
+                <div class="marker" style="top: 35%; left: 40%;" data-title="凱旋門">
+                    <div class="pin"></div>
+                    <div class="info">凱旋門</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 每月節慶 -->
+    <div class="manual-events">
+        <h3><i class="fas fa-calendar-day"></i> 年度重要節慶</h3>
+        <table>
+            <tr>
+                <th>節慶</th>
+                <th>日期</th>
+                <th>特色</th>
+            </tr>
+            <tr>
+                <td>巴黎時裝週</td>
+                <td>2月及9月</td>
+                <td>全球頂尖時裝設計師展示最新作品</td>
+            </tr>
+            <tr>
+                <td>巴士底日</td>
+                <td>7月14日</td>
+                <td>艾菲爾鐵塔煙花匯演同軍事遊行</td>
+            </tr>
+            <tr>
+                <td>巴黎爵士音樂節</td>
+                <td>11月</td>
+                <td>喺拉德芳斯區舉行嘅國際爵士音樂盛會</td>
+            </tr>
+            <tr>
+                <td>聖誕市集</td>
+                <td>12月中旬至1月初</td>
+                <td>香榭麗舍大道同杜樂麗花園嘅節日市集</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ================= 頁尾區塊 ================= -->
+    <section class="footer" id="contact">
+        <div class="footer-container cantonese">
+            <div class="contact-info">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-phone-alt"></i> +852 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@travel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 香港旅遊中心大廈</p>
+            </div>
+            <div class="social-media">
+                <h3>關注我哋</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>訂閱電子報</h3>
+                <form>
+                    <input type="email" placeholder="你嘅電子郵件">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright cantonese">
+            <p>&copy; 2025 環球旅遊探索 版權所有</p>
+        </div>
+    </section>
+
+    <script src="/js/paris.js"></script>
 </body>
 </html>

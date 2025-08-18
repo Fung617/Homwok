@@ -1,152 +1,193 @@
 <!DOCTYPE html>
-<html lang="zh-Hant"> 
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>環球旅遊探索</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="/HomeWork/css/css/home.css" />
+    <link rel="stylesheet" href="/css/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add Cantonese-specific styling if needed */
+        .cantonese {
+            font-family: 'Noto Sans JP', 'Microsoft JhengHei', sans-serif;
+        }
+    </style>
 </head>
 <body>
-
     <!-- ================= 導航欄 ================= -->
     <nav class="navbar">
         <a href="index.html" class="logo-container">
-            <img src="/HomeWork/img/logo2.png" alt="環球旅遊探索" class="header-logo">
+            <img src="/img/logo2.png" alt="環球旅遊探索" class="header-logo">
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">首頁</a></li>
-            <li class="active"><a href="kyoto.html">京都</a></li>
-            <li><a href="paris.html">巴黎</a></li>
-            <li><a href="machu-picchu.html">馬丘比丘</a></li>
-            <li><a href="cairo.html">開羅</a></li>
-            <li class="ctn"><a href="#contact">聯絡</a></li>
+            <li><a href="index.html" class="active">首頁</a></li>
+            <li><a href="kyoto.html">日本京都</a></li>
+            <li><a href="paris.html">法國巴黎</a></li>
+            <li><a href="rome.html">意大利羅馬</a></li>
+            <li><a href="bangkok.html">泰國曼谷</a></li>
+            <li><a href="#contact">聯絡我哋</a></li>
         </ul>
         <button class="menu-btn">
-            <img src="/HomeWork/img/menu-btn.png" alt="Menu" class="menu-icon">
+            <img src="/img/menu-btn.png" alt="Menu" class="menu-icon">
         </button>
     </nav>
 
     <!-- ================= 主視覺區 ================= -->
-    <header>
+    <div class="image-header">
         <video autoplay muted loop playsinline class="header-video">
-            <source src="/HomeWork/VO/traveler1-vmake.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            <source src="/vo/traveler1-vmake.mp4" type="video/mp4">
         </video>
-        <div class="header-content">
-            <h2>探索多彩世界</h2>
-            <div class="line"></div> 
-            <h1>一份美好的禮物</h1>
-            <a href="#" class="ctn">Learn More</a>
+        <div class="header-content cantonese">
+            <h2>開始你嘅旅遊冒險</h2>
+            <div class="line"></div>
+            <h1>探索世界，簡單又有趣</h1>
+            <a href="#destinations" class="ctn">立即探索</a>
         </div>
-    </header>
+    </div>
 
     <!-- ================= 熱門目的地區塊 ================= -->
-<section class="events">
-    <div class="title">
-        <h1>熱門旅遊目的地</h1>
-        <div class="line"></div>
-    </div>
-    <div class="country-grid">
-        <a href="kyoto.html" class="country-card">
-        <!-- 確認圖片路徑是否正確 -->
-            <img src="/HomeWork/img/JP/jpn.jpg" alt="日本京都" class="country-img">
-            <div class="country-label">
-                <h4>日本京都</h4>
-            <p class="country-desc">文化遺產之旅</p>
-            </div>
-        </a>
-        <a href="paris.html" class="country-card">
-            <img src="/HomeWork/img/Paris/Paris.jpg" alt="法國巴黎" class="country-img">
-            <div class="country-label">
-                <h4>法國巴黎</h4>
-            <p class="country-desc">文化遺產之旅</p>
-            </div>
-        </a>
-        <a href="machu-picchu.html" class="country-card">
-            <img src="/HomeWork/img/MachuPicchu/MachuPicchu.jpg" alt="秘魯馬丘比丘" class="country-img">
-            <div class="country-label">
-                <h4>秘魯馬丘比丘</h4>
-            <p class="country-desc">文化遺產之旅</p>
-            </div>
-        </a>
-        <a href="cairo.html" class="country-card">
-            <img src="/HomeWork/img/Cairo/Cairo.jpg" alt="埃及開羅" class="country-img">
-            <div class="country-label">
-                <h4>埃及開羅</h4>
-            <p class="country-desc">文化遺產之旅</p>
-            </div>
-        </a>
-    </div>
-</section>
-
-    <!-- ================= 探索世界區塊 ================= -->
-    <section class="explore">
-        <video autoplay muted loop playsinline class="explore-video">
-            <source src="/HomeWork/VO/travelar3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-                <!-- 探索內容 -->
-        <div class="explore-content">
-          <h1>EXPLORE THE WORLD</h1>
-          <div class="line"></div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur tempore voluptatibus impedit totam! Nulla, exercitationem.</p>
-          <a href="#" class="ctn">Learn More</a>
+    <section class="destinations" id="destinations">
+        <div class="title">
+            <h1 class="cantonese">熱門旅遊目的地</h1>
+            <div class="line"></div>
+        </div>
+        <div class="country-grid">
+            <a href="kyoto.html" class="country-card">
+                <img src="/img/JP/jpn.jpg" alt="日本京都" class="country-img">
+                <div class="country-label cantonese">
+                    <h4>日本京都</h4>
+                    <p class="country-desc">古老寺廟與櫻花之美</p>
+                    <p class="country-info">體驗日本傳統文化，漫步金閣寺同清水寺，春天賞櫻，秋天睇紅葉。</p>
+                </div>
+            </a>
+            <a href="paris.html" class="country-card">
+                <img src="/img/Paris/Paris.jpg" alt="法國巴黎" class="country-img">
+                <div class="country-label cantonese">
+                    <h4>法國巴黎</h4>
+                    <p class="country-desc">浪漫與藝術之都</p>
+                    <p class="country-info">參觀埃菲爾鐵塔同盧浮宮，享受法式咖啡館嘅悠閒時光。</p>
+                </div>
+            </a>
+            <a href="rome.html" class="country-card">
+                <img src="/img/Room/意大利羅馬.jpeg" alt="意大利羅馬" class="country-img">
+                <div class="country-label cantonese">
+                    <h4>意大利羅馬</h4>
+                    <p class="country-desc">永恆之城</p>
+                    <p class="country-info">探訪古羅馬鬥獸場同萬神殿，漫步七丘之城嘅歷史遺跡。</p>
+                </div>
+            </a>
+            <a href="bangkok.html" class="country-card">
+                <img src="/img//bangkok/泰國曼谷.jpeg" alt="泰國曼谷" class="country-img">
+                <div class="country-label cantonese">
+                    <h4>泰國曼谷</h4>
+                    <p class="country-desc">東方文化之都</p>
+                    <p class="country-info">探訪金碧輝煌嘅大皇宮同熱鬧夜市，體驗泰式風情。</p>
+                </div>
+            </a>
         </div>
     </section>
 
-    <section class="tours">
-        <div class="row">
-            <div class="col content-col">
-                <h1>UPCOMING TOURS & DESTINATION</h1>
-                <div class="line"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A explicabo numquam sequi doloremque accusamus tenetur?</p>
-                <a href="#" class="ctn">Learn More</a>
+    <!-- ================= 旅遊小貼士區塊 ================= -->
+    <section class="travel-tips">
+        <div class="title">
+            <h1 class="cantonese">新手旅遊小貼士</h1>
+            <div class="line"></div>
+        </div>
+        <div class="tips-grid">
+            <div class="tip-card cantonese">
+                <i class="fas fa-passport"></i>
+                <h3>準備護照與簽證</h3>
+                <p>出發前確認護照有效期至少6個月，並查詢目的地嘅簽證要求。</p>
             </div>
-            <div class="col image-col">
-                <div class="image-gallery">
-                    <img src="/HomeWork/img/JP/ Kyoto.jpg" alt="Tour destination 1">
-                    <img src="/HomeWork/img/Paris/Paris.jpg" alt="Tour destination 2">
-                    <img src="/HomeWork/img/MachuPicchu/MachuPicchu.jpg" alt="Tour destination 3">
-                    <img src="/HomeWork/img/Cairo/Cairo.jpg" alt="Tour destination 4">
-                </div>
+            <div class="tip-card cantonese">
+                <i class="fas fa-luggage-cart"></i>
+                <h3>輕裝旅行</h3>
+                <p>只帶必需品，選擇輕便行李，方便移動同慳位。</p>
+            </div>
+            <div class="tip-card cantonese">
+                <i class="fas fa-language"></i>
+                <h3>學簡單當地語言</h3>
+                <p>學幾句當地問候語或常用詞，幫助同當地人交流。</p>
+            </div>
+            <div class="tip-card cantonese">
+                <i class="fas fa-camera"></i>
+                <h3>記錄美好時刻</h3>
+                <p>帶上相機或手機，捕捉旅途中嘅風景同回憶。</p>
             </div>
         </div>
     </section>
 
     <!-- ================= 頁尾區塊 ================= -->
-<section class="footer">
-            <!-- 聯絡資訊 -->
-    <div class="footer-container">
-        <div class="contact-info">
-            <h3>聯絡我們</h3>
-            <p><i class="fas fa-phone-alt"></i> +852 1234 5678</p>
-            <p><i class="fas fa-envelope"></i> info@travel.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> 香港旅遊中心大廈</p>
-        </div>
-        
-        <div class="social-media">
-            <h3>關注我們</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-line"></i></a>
+    <section class="footer" id="contact">
+        <div class="footer-container cantonese">
+            <div class="contact-info">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-phone-alt"></i> +852 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@travel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 香港旅遊中心大廈</p>
+            </div>
+            <div class="social-media">
+                <h3>關注我哋</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>訂閱電子報</h3>
+                <form>
+                    <input type="email" placeholder="你嘅電子郵件">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
-        
-        <div class="newsletter">
-            <h3>訂閱電子報</h3>
-            <form>
-                <input type="email" placeholder="您的電子郵件">
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-            </form>
+        <div class="copyright cantonese">
+            <p>&copy; 2025 環球旅遊探索 版權所有</p>
         </div>
-    </div>
-    
-            <!-- 版權資訊 -->
-    <div class="copyright">
-        <p>&copy; 2023 旅遊資訊網站 版權所有</p>
-    </div>
-</section>
+    </section>
+
+    <script>
+        // 簡單交互：漢堡選單切換
+        document.querySelector('.menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+        
+        // 視頻自動播放處理
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.header-video');
+            if(video) {
+                video.play().catch(e => {
+                    // 移動設備後備方案
+                    video.poster = '/img/fallback.jpg';
+                });
+            }
+        });
+
+        // 熱門目的地區塊左到右滾動動畫
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.country-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // 延遲顯示每個卡片，製造交錯效果
+                        setTimeout(() => {
+                            entry.target.classList.add('show');
+                        }, index * 100); // 每張卡片延遲100ms
+                        observer.unobserve(entry.target); // 顯示後停止監測
+                    }
+                });
+            }, {
+                threshold: 0.2, // 卡片進入視窗20%時觸發
+                rootMargin: '0px 0px -50px 0px' // 提前50px觸發
+            });
+
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+</body>
+</html>

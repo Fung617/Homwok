@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本京都 | 環球旅遊探索</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/HomeWork/css/css/home.css">
-    <link rel="stylesheet" href="/HomeWork/css/css/kyoto.css">
+    <link rel="stylesheet" href="/css/css/kyoto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <!-- ================= 導航欄 ================= -->
     <nav class="navbar">
         <a href="index.html" class="logo-container">
-            <img src="/HomeWork/img/logo2.png" alt="環球旅遊探索" class="header-logo">
+            <img src="/img/logo2.png" alt="環球旅遊探索" class="header-logo">
         </a>
         <ul class="nav-links">
             <li><a href="index.html">首頁</a></li>
-            <li class="active"><a href="kyoto.html">京都</a></li>
-            <li><a href="paris.html">巴黎</a></li>
-            <li><a href="machu-picchu.html">馬丘比丘</a></li>
-            <li><a href="cairo.html">開羅</a></li>
-            <li class="ctn"><a href="#contact">聯絡</a></li>
+            <li><a href="kyoto.html">日本京都</a></li>
+            <li><a href="paris.html">法國巴黎</a></li>
+            <li><a href="rome.html">意大利羅馬</a></li>
+            <li><a href="bangkok.html">泰國曼谷</a></li>
+            <li><a href="#contact">聯絡我哋</a></li>
         </ul>
         <button class="menu-btn">
-            <img src="/HomeWork/img/menu-btn.png" alt="Menu" class="menu-icon">
+            <img src="/img/menu-btn.png" alt="Menu" class="menu-icon">
         </button>
     </nav>
 
-    <!-- ================= 主視覺區 ================= -->
+    <!-- 主視覺區 -->
     <header class="japan-header">
         <video autoplay muted loop playsinline class="header-video">
-            <source src="/HomeWork/img/JP/京都.mp4" type="video/mp4">
-            <!-- 後備圖片 -->
-            <img src="/HomeWork/img/JP/kyoto-banner.jpg" alt="京都風景" class="fallback-img">
+            <source src="/img/JP/京都.mp4" type="video/mp4">
         </video>
         <div class="header-content">
             <h2>千年古都</h2>
@@ -44,176 +39,195 @@
         </div>
     </header>
 
-    <!-- ================= 關於京都 ================= -->
-    <section class="about-section">
+    <!-- 關於京都 -->
+    <section class="about-section" id="attractions">
         <div class="title">
-            <h1>京都物語</h1>
+            <h1 class="title-text">京都物語</h1>
             <div class="line"></div>
         </div>
         <div class="row">
             <div class="col content-col">
                 <p>京都，日本文化的精髓所在，擁有17處聯合國世界文化遺產。從平安時代至今，這座古都見證了日本千年的歷史變遷，保留著傳統茶道、和服、能劇等文化瑰寶。</p>
                 <p>四季分明的京都，春天櫻花紛飛，夏日綠意盎然，秋時紅葉如火，冬季白雪皚皚，每個季節都有獨特風情。</p>
+                <div id="history-info" class="history-info-box">
+                    <h3 id="history-title">景點歷史介紹</h3>
+                    <p id="history-content">請點擊右方圖片查看詳細歷史介紹</p>
+                </div>
                 <a href="#culture" class="ctn">了解文化</a>
             </div>
             <div class="col image-col">
-                <img src="/HomeWork/img/JP/ Kyoto.jpg" alt="京都傳統建築" class="zoomable-img">
+                <div class="kyoto-gallery">
+                    <div class="kyoto-image" onclick="showHistory('伏見稻荷大社', '伏見稻荷大社建於8世紀，以千本鳥居聞名，是日本3萬多座稻荷神社的總本社。主要祭奉稻荷神（農業與商業之神），朱紅色鳥居象徵神明與人間的通道。')">
+                        <img src="/img/JP/伏見稻荷大社.jpg" alt="伏見稻荷大社" class="rounded-corner">
+                        <div class="image-caption">伏見稻荷大社</div>
+                    </div>
+                    <div class="kyoto-image" onclick="showHistory('祇園花見小路', '祇園是京都最具代表性的藝伎區，花見小路保留江戶時期的茶屋建築。17世紀初發展成為藝伎文化中心，現仍可見到藝伎前往茶屋演出的身影。')">
+                        <img src="/img/JP/祇園花見小路.jpg" alt="祇園花見小路" class="rounded-corner">
+                        <div class="image-caption">祇園花見小路</div>
+                    </div>
+                    <div class="kyoto-image" onclick="showHistory('嵐山竹林', '嵐山竹林小徑長約400米，竹林源自14世紀天龍寺的庭園設計。竹子在日本文化象徵純潔與韌性，風吹過竹林的聲音被列為「日本100種最值得保留的聲音」之一。')">
+                        <img src="/img/JP/嵐山竹林.jpg" alt="嵐山竹林" class="rounded-corner">
+                        <div class="image-caption">嵐山竹林</div>
+                    </div>
+                    <div class="kyoto-image" onclick="showHistory('二條城', '二條城建於1603年，是德川家康在京都的居所，見證了德川幕府的興衰。1867年德川慶喜在此宣布「大政奉還」，結束了幕府時代。')">
+                        <img src="/img/JP/二條城.jpg" alt="二條城" class="rounded-corner">
+                        <div class="image-caption">二條城</div>
+                    </div>
+                    <div class="kyoto-image" onclick="showHistory('三年坂', '三年坂是連接清水寺與八坂神社的石板坡道，因傳說在此跌倒會三年內去世而得名。兩側保留江戶時代的町家建築，現為重要傳統建造物群保存地區。')">
+                        <img src="/img/JP/三年坂.jpeg" alt="三年坂" class="rounded-corner">
+                        <div class="image-caption">三年坂</div>
+                    </div>
+                    <div class="kyoto-image" onclick="showHistory('金閣寺', '金閣寺正式名稱為鹿苑寺，建於1397年，原為足利義滿的別墅。外牆貼滿金箔，倒映池中的金閣是京都最著名的景觀之一，1950年曾遭焚毀，1955年重建。')">
+                        <img src="/img/JP/金阁寺.jpeg" alt="金閣寺" class="rounded-corner">
+                        <div class="image-caption">金閣寺</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= 文化體驗 ================= -->
-<section class="culture-section" id="culture">
-    <div class="title">
-        <h1>文化體驗</h1>
-        <div class="line"></div>
-    </div>
-    <div class="culture-grid">
-        <!-- 原有和服體驗 -->
-        <div class="culture-card">
-            <i class="fas fa-vest"></i>
-            <h3>和服體驗</h3>
-            <p>穿上精緻和服漫步古街，感受京都優雅風情。</p>
-            <a href="#" class="ctn-small">預約體驗</a>
+<!-- 文化體驗 -->
+    <section class="culture-section" id="culture">
+        <div class="title">
+            <h1>文化體驗</h1>
+            <div class="line"></div>
         </div>
-
-        <!-- 新增選項1：茶道體驗 -->
-        <div class="culture-card">
-            <i class="fas fa-mug-hot"></i>
-            <h3>茶道體驗</h3>
-            <p>學習正宗裏千家茶道，品味抹茶與和菓子的禪意。</p>
-            <a href="#" class="ctn-small">查看課程</a>
-        </div>
-
-        <!-- 新增選項2：京友禪手繪 -->
-        <div class="culture-card">
-            <i class="fas fa-paint-brush"></i>
-            <h3>京友禪手繪</h3>
-            <p>親手繪製傳統友禪染，創作獨一無二的京都紀念品。</p>
-            <a href="#" class="ctn-small">立即報名</a>
-        </div>
-
-        <!-- 新增選項3：夜間庭園觀賞 -->
-        <div class="culture-card">
-            <i class="fas fa-moon"></i>
-            <h3>夜間庭園</h3>
-            <p>特別開放！在月光下欣賞枯山水庭園的侘寂之美。</p>
-            <a href="#" class="ctn-small">限時預約</a>
-        </div>
-    </div>
-</section>
-
-<!-- ================= 節慶與天氣 ================= -->
-    <div class="title">
-        <h1>景點地圖</h1>
-        <div class="line"></div>
-        <p>點擊標記查看景點資訊</p>
-    </div>
-<!-- 在kyoto.html的景點地圖區塊替換為 -->
-<div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417885.1397637813!2d135.4383007!3d35.0983314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2z5pel5pys!5e0!3m2!1szh-TW!2shk!4v1620000000000!5m2!1szh-TW!2shk" 
-            width="100%" 
-            height="500" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-    </iframe>
-
-    <div class="custom-markers">
-        <div class="marker" style="top: 30%; left: 40%;" data-title="金閣寺">
-        <div class="pin pulse"></div> <!-- 有動畫 -->
-            <div class="info">金閣寺</div>
-        </div>
-        
-    <!-- 動畫標記 -->
-    <div class="marker" style="top: 55%; left: 60%;" data-title="伏見稻荷大社">
-        <div class="pin pulse"></div> <!-- 有動畫 -->
-        <div class="info">伏見稻荷大社</div>
-    </div>
-        
-        <!-- 清水寺 (無動畫) -->
-        <div class="marker" style="top: 40%; left: 45%;" data-title="清水寺">
-        <div class="pin pulse"></div> <!-- 有動畫 -->
-            <div class="info">清水寺</div>
-        </div>
-        
-        <!-- 嵐山竹林 (無動畫) -->
-        <div class="marker" style="top: 35%; left: 30%;" data-title="嵐山竹林">
-        <div class="pin pulse"></div> <!-- 有動畫 -->
-            <div class="info">嵐山竹林</div>
-        </div>
-    </div>
-</div>
-    
-    <!-- 每月節慶 -->
-<div class="manual-events">
-    <h3><i class="fas fa-calendar-day"></i> 年度重要節慶</h3>
-    <table>
-        <tr>
-            <th>節慶</th>
-            <th>日期</th>
-            <th>特色</th>
-        </tr>
-        <tr>
-            <td>祇園祭</td>
-            <td>7月1日-31日</td>
-            <td>花車巡遊</td>
-        </tr>
-        <tr>
-            <td>七夕祭</td>
-            <td>7月7日</td>
-            <td>嵐山渡月橋的竹飾短冊許願活動</td>
-        </tr>
-        <tr>
-            <td>時代祭</td>
-            <td>10月22日</td>
-            <td>平安神宮的歷史人物大遊行，從明治維新回溯到平安時代的服裝秀</td>
-        </tr>
-        <tr>
-            <td>嵐山紅葉燈籠</td>
-            <td>11月中旬-12月初</td>
-            <td>渡月橋周邊夜間點燈，倒映在保津川的紅葉絕景</td>
-        </tr>
-
-    </table>
-</div>
-    <!-- ================= 頁尾區塊 ================= -->
-<section class="footer">
-            <!-- 聯絡資訊 -->
-    <div class="footer-container">
-        <div class="contact-info">
-            <h3>聯絡我們</h3>
-            <p><i class="fas fa-phone-alt"></i> +852 1234 5678</p>
-            <p><i class="fas fa-envelope"></i> info@travel.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> 香港旅遊中心大廈</p>
-        </div>
-        
-        <div class="social-media">
-            <h3>關注我們</h3>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-line"></i></a>
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/JP/和服體驗.jpg" alt="和服體驗" class="rounded-corner">
+                </div>
+                <h3>和服體驗</h3>
+                <p>穿上精緻和服漫步古街，感受京都優雅風情。</p>
+                <a href="https://ewha-yifu.com/shops/kyoto-area/kiyomizudera/kiyomizudera-yukata-booking/" class="ctn-small" target="_blank">查看預約</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/JP/茶道體驗.jpeg" alt="茶道體驗" class="rounded-corner">
+                </div>
+                <h3>茶道體驗</h3>
+                <p>學習正宗裏千家茶道，品味抹茶與和菓子的禪意。</p>
+                <a href="https://www.viator.com/tours/Kyoto/Experience-Tea-Ceremony-wearing-a-Kimono-in-Kyoto/d332-51440P61" class="ctn-small" target="_blank">查看預約</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/JP/京友禪手繪.jpeg" alt="京友禪手繪" class="rounded-corner">
+                </div>
+                <h3>京友禪手繪</h3>
+                <p>親手繪製傳統友禪染，創作獨一無二的京都紀念品。</p>
+                <a href="https://www.marumasu-nishimuraya.co.jp/zh/faq" class="ctn-small" target="_blank">立即報名</a>
+            </div>
+            <div class="culture-card">
+                <div class="culture-image">
+                    <img src="/img/JP/夜間庭園.jpg" alt="夜間庭園" class="rounded-corner">
+                </div>
+                <h3>夜間庭園</h3>
+                <p>特別開放！在月光下欣賞枯山水庭園的侘寂之美。</p>
+                <a href="https://hk.wamazing.com/media/article/a-2080/" class="ctn-small" target="_blank">首推夜景</a>
             </div>
         </div>
-        
-        <div class="newsletter">
-            <h3>訂閱電子報</h3>
-            <form>
-                <input type="email" placeholder="您的電子郵件">
-                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-            </form>
-        </div>
-    </div>
-    
-            <!-- 版權資訊 -->
-    <div class="copyright">
-        <p>&copy; 2023 旅遊資訊網站 版權所有</p>
-    </div>
-</section>
+    </section>
 
-    <script src="/HomeWork/js/main.js"></script>
-    <script src="/HomeWork/js/kyoto.js"></script>
+    <!-- 景點地圖 -->
+    <section class="map-section">
+        <div class="title">
+            <h1>景點地圖</h1>
+            <div class="line"></div>
+            <p>點擊標記查看景點資訊</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417885.1397637813!2d135.4383007!3d35.0983314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001a8d6cd3cc3f1%3A0xc0961d366bbb1d3d!2z5pel5pys!5e0!3m2!1szh-TW!2shk!4v1620000000000!5m2!1szh-TW!2shk" 
+                    width="100%" 
+                    height="500" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+            </iframe>
+            <div class="custom-markers">
+                <div class="marker" style="top: 30%; left: 40%;" data-title="金閣寺">
+                    <div class="pin pulse"></div>
+                    <div class="info">金閣寺</div>
+                </div>
+                <div class="marker" style="top: 55%; left: 60%;" data-title="伏見稻荷大社">
+                    <div class="pin pulse"></div>
+                    <div class="info">伏見稻荷大社</div>
+                </div>
+                <div class="marker" style="top: 40%; left: 45%;" data-title="清水寺">
+                    <div class="pin"></div>
+                    <div class="info">清水寺</div>
+                </div>
+                <div class="marker" style="top: 35%; left: 30%;" data-title="嵐山竹林">
+                    <div class="pin"></div>
+                    <div class="info">嵐山竹林</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 每月節慶 -->
+    <div class="manual-events">
+        <h3><i class="fas fa-calendar-day"></i> 年度重要節慶</h3>
+        <table>
+            <tr>
+                <th>節慶</th>
+                <th>日期</th>
+                <th>特色</th>
+            </tr>
+            <tr>
+                <td>祇園祭</td>
+                <td>7月1日-31日</td>
+                <td>花車巡遊</td>
+            </tr>
+            <tr>
+                <td>七夕祭</td>
+                <td>7月7日</td>
+                <td>嵐山渡月橋的竹飾短冊許願活動</td>
+            </tr>
+            <tr>
+                <td>時代祭</td>
+                <td>10月22日</td>
+                <td>平安神宮的歷史人物大遊行，從明治維新回溯到平安時代的服裝秀</td>
+            </tr>
+            <tr>
+                <td>嵐山紅葉燈籠</td>
+                <td>11月中旬-12月初</td>
+                <td>渡月橋周邊夜間點燈，倒映在保津川的紅葉絕景</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ================= 頁尾區塊 ================= -->
+    <section class="footer" id="contact">
+        <div class="footer-container cantonese">
+            <div class="contact-info">
+                <h3>聯絡我們</h3>
+                <p><i class="fas fa-phone-alt"></i> +852 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> info@travel.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 香港旅遊中心大廈</p>
+            </div>
+            <div class="social-media">
+                <h3>關注我哋</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>訂閱電子報</h3>
+                <form>
+                    <input type="email" placeholder="你嘅電子郵件">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright cantonese">
+            <p>&copy; 2025 環球旅遊探索 版權所有</p>
+        </div>
+    </section>
+
+
+    <script src="/js/kyoto.js"></script>
 </body>
 </html>
