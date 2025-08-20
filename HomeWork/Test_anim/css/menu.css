@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, red, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_btu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.menu_btu .line {
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: left;
+    transition: transform 0.5s ease, opacity 0.2s ease;
+}
+
+.menu_btu .middle_line {
+    transition-delay: 0.3s;
+}
+
+.menu_btu.open .middle_line {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.menu_btu.open .top_line {
+    transform: rotate(45deg);
+}
+
+.menu_btu.open .bottom_line {
+    transform: rotate(-45deg);
+}
