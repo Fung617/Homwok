@@ -12,14 +12,14 @@ body {
     align-items: center;
 }
 
-.menu_btu {
+.menu_btn { /* 改为 menu_btn */
     display: flex;
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
 }
 
-.menu_btu .line {
+.menu_btn .line { /* 改为 menu_btn */
     width: 28px;
     height: 2px;
     background-color: #fff;
@@ -27,19 +27,19 @@ body {
     transition: transform 0.5s ease, opacity 0.2s ease;
 }
 
-.menu_btu .middle_line {
+.menu_btn .middle_line { /* 改为 menu_btn */
     transition-delay: 0.3s;
 }
 
-.menu_btu.open .middle_line {
+.menu_btn.open .middle_line { /* 改为 menu_btn.open */
     opacity: 0;
     transition-delay: 0s;
 }
 
-.menu_btu.open .top_line {
+.menu_btn.open .top_line { /* 改为 menu_btn.open */
     transform: rotate(45deg);
 }
 
-.menu_btu.open .bottom_line {
+.menu_btn.open .bottom_line { /* 改为 menu_btn.open */
     transform: rotate(-45deg);
 }

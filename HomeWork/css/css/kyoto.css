@@ -52,7 +52,7 @@ a {
     padding: 20px;
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .logo-container {
@@ -87,7 +87,7 @@ a {
 }
 
 .nav-links a:hover {
-    color: #FF5482;
+    color: #FF5482; /* 統一 hover 顏色，與 kyoto.css 一致 */
 }
 
 .nav-links .active a {
@@ -101,12 +101,31 @@ a {
     border: none;
     cursor: pointer;
     display: none;
+    position: relative;
+    z-index: 1002;
 }
 
 .menu-icon {
     width: 40px;
     height: 40px;
+    transition: opacity 0.3s;
 }
+
+.menu-icon.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon:not(.close) {
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon.close {
+    opacity: 1;
+}
+
 /* 主視覺區 */
 .japan-header {
     position: relative;
@@ -608,20 +627,32 @@ a {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
+        align-items: center; /* 至中 */
         background: rgba(0, 0, 0, 0.9);
-        clip-path: circle(0px at 90% -10%);
-        transition: all 0.8s ease-out;
+        clip-path: circle(0px at calc(100% - 60px) 20px); /* 圓心對準 hamburger */
+        transition: clip-path 0.8s ease-out; /* 開啟動畫 */
         z-index: 999;
+        opacity: 1;
+        pointer-events: none;
     }
 
-    .nav-links.show {
-        clip-path: circle(1500px at 90% -10%);
+    .nav-links.active {
+        clip-path: circle(1500px at calc(100% - 60px) 20px);
+        pointer-events: auto;
     }
 
     .nav-links li {
         margin: 30px auto;
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: opacity 0.5s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+    }
+
+    .nav-links:not(.active) {
+        transition: clip-path 0.4s ease-out; /* 關閉動畫加快 */
     }
 
     .nav-links.show li {
