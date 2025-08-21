@@ -1,8 +1,9 @@
-/* 日本主題色 */
+/* 法國主題色 */
 :root {
-    --japan-red: #FF5482; /* Updated to match provided navbar hover color */
-    --japan-dark: #2e2e2e;
-    --japan-beige: #f5f0e6;
+    --france-blue: #4682B4; /* 法國國旗藍色 */
+    --france-gold: #F5E050; /* 淡金色，代表巴黎奢華 */
+    --france-dark: #2e2e2e;
+    --france-light: #f5f5f5;
 }
 
 /* 重置樣式 */
@@ -27,7 +28,7 @@ a {
 .ctn {
     display: inline-block;
     padding: 12px 30px;
-    background: var(--japan-red);
+    background: var(--france-blue);
     color: white;
     border-radius: 30px;
     font-weight: 600;
@@ -36,8 +37,8 @@ a {
 
 .ctn:hover {
     background: white;
-    color: var(--japan-red);
-    border: 2px solid var(--japan-red);
+    color: var(--france-blue);
+    border: 2px solid var(--france-blue);
     transform: translateY(-3px);
 }
 
@@ -87,11 +88,11 @@ a {
 }
 
 .nav-links a:hover {
-    color: #FF5482; /* 統一 hover 顏色，與 kyoto.css 一致 */
+    color: var(--france-blue);
 }
 
 .nav-links .active a {
-    color: #FF5482;
+    color: var(--france-blue);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -127,7 +128,7 @@ a {
 }
 
 /* 主視覺區 */
-.japan-header {
+.paris-header {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -168,7 +169,7 @@ a {
 }
 
 .header-content .line {
-    background: var(--japan-red);
+    background: var(--france-blue);
     height: 4px;
     width: 60px;
     margin: 10px auto;
@@ -183,7 +184,7 @@ a {
     }
 }
 
-/* 關於京都 */
+/* 關於巴黎 */
 .about-section {
     padding: 80px 5%;
 }
@@ -195,11 +196,11 @@ a {
 
 .title-text {
     font-size: 2.5rem;
-    color: var(--japan-dark);
+    color: var(--france-dark);
 }
 
 .title .line {
-    background: var(--japan-red);
+    background: var(--france-blue);
     height: 4px;
     width: 80px;
     margin: 10px auto;
@@ -223,22 +224,22 @@ a {
 }
 
 .history-info-box {
-    background: var(--japan-beige);
+    background: var(--france-light);
     padding: 20px;
-    border-left: 4px solid var(--japan-red);
+    border-left: 4px solid var(--france-blue);
     margin: 30px 0;
     border-radius: 0 8px 8px 0;
     min-height: 150px;
 }
 
-.kyoto-gallery {
+.paris-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 30px;
 }
 
-.kyoto-image {
+.paris-image {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -246,7 +247,7 @@ a {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255, 84, 130, 0.2); /* Updated to match --japan-red */
+    border: 1px solid rgba(0, 85, 164, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -258,11 +259,11 @@ a {
     transition: all 0.3s ease;
 }
 
-.kyoto-image:hover {
-    box-shadow: 0 12px 30px rgba(255, 84, 130, 0.15);
+.paris-image:hover {
+    box-shadow: 0 12px 30px rgba(0, 85, 164, 0.15);
 }
 
-.kyoto-image:hover .rounded-corner {
+.paris-image:hover .rounded-corner {
     transform: scale(1.05);
     filter: brightness(1.05);
 }
@@ -271,7 +272,7 @@ a {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: rgba(255, 84, 130, 0.85); /* Updated to match --japan-red */
+    background: rgba(0, 85, 164, 0.85);
     color: white;
     padding: 8px 15px;
     border-radius: 4px;
@@ -280,7 +281,7 @@ a {
 }
 
 @media (max-width: 992px) {
-    .kyoto-gallery {
+    .paris-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
     .row {
@@ -289,32 +290,15 @@ a {
 }
 
 @media (max-width: 576px) {
-    .kyoto-gallery {
+    .paris-gallery {
         grid-template-columns: 1fr;
     }
 }
 
 /* 文化體驗 */
 .culture-section {
-    background: var(--japan-beige, #f5f5f5);
+    background: var(--france-light, #f5f5f5);
     padding: 80px 5%;
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.title h1 {
-    font-size: 2.5rem;
-    color: var(--japan-dark, #333);
-}
-
-.title .line {
-    background: var(--japan-red, #ff5482);
-    height: 4px;
-    width: 80px;
-    margin: 10px auto;
 }
 
 .culture-grid {
@@ -331,13 +315,13 @@ a {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--japan-red, #ff5482);
+    border-top: 4px solid var(--france-blue, #0055A4);
     transition: all 0.3s ease;
 }
 
 .culture-card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(255, 84, 130, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 85, 164, 0.1);
 }
 
 .culture-image {
@@ -347,7 +331,7 @@ a {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255, 84, 130, 0.2);
+    border: 1px solid rgba(0, 85, 164, 0.2);
     transition: all 0.3s ease;
     width: 200px;
     height: 200px;
@@ -355,7 +339,7 @@ a {
 }
 
 .culture-card:hover .culture-image {
-    box-shadow: 0 12px 30px rgba(255, 84, 130, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 85, 164, 0.15);
 }
 
 .culture-image img.rounded-corner {
@@ -387,7 +371,7 @@ a {
 .ctn-small {
     display: inline-block;
     padding: 10px 25px;
-    background: var(--japan-red, #ff5482);
+    background: var(--france-blue, #0055A4);
     color: white;
     border-radius: 30px;
     font-size: 0.9rem;
@@ -397,8 +381,8 @@ a {
 
 .ctn-small:hover {
     background: white;
-    color: var(--japan-red, #ff5482);
-    border-color: var(--japan-red, #ff5482);
+    color: var(--france-blue, #0055A4);
+    border-color: var(--france-blue, #0055A4);
     transform: translateY(-3px);
 }
 
@@ -440,7 +424,7 @@ a {
 .pin {
     width: 20px;
     height: 20px;
-    background: var(--japan-red);
+    background: var(--france-blue);
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
 }
@@ -507,12 +491,12 @@ a {
 }
 
 .manual-events th {
-    background-color: var(--japan-red);
+    background-color: var(--france-blue);
     color: white;
 }
 
 .manual-events tr:hover {
-    background-color: #fff9f9;
+    background-color: #f5faff;
 }
 
 /* ================= Footer Section ================= */
@@ -549,7 +533,7 @@ a {
 
 .contact-info i {
     margin-right: 10px;
-    color: #FF5482;
+    color: var(--france-blue);
 }
 
 .social-icons {
@@ -572,7 +556,7 @@ a {
 }
 
 .social-icons a:hover {
-    background: #FF5482;
+    background: var(--france-blue);
     transform: translateY(-3px);
 }
 
@@ -592,7 +576,7 @@ a {
 }
 
 .newsletter button {
-    background: #FF5482;
+    background: var(--france-blue);
     color: white;
     border: none;
     padding: 0 15px;
@@ -602,7 +586,7 @@ a {
 }
 
 .newsletter button:hover {
-    background: #e04a72;
+    background: #003e7a;
 }
 
 .copyright {
@@ -627,10 +611,10 @@ a {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* 至中 */
+        align-items: center;
         background: rgba(0, 0, 0, 0.9);
-        clip-path: circle(0px at calc(100% - 60px) 20px); /* 圓心對準 hamburger */
-        transition: clip-path 0.8s ease-out; /* 開啟動畫 */
+        clip-path: circle(0px at calc(100% - 60px) 20px);
+        transition: clip-path 0.8s ease-out;
         z-index: 999;
         opacity: 1;
         pointer-events: none;
@@ -639,6 +623,11 @@ a {
     .nav-links.active {
         clip-path: circle(1500px at calc(100% - 60px) 20px);
         pointer-events: auto;
+    }
+
+    /* 為關閉動畫加快速度 */
+    .nav-links:not(.active) {
+        transition: clip-path 0.4s ease-out;
     }
 
     .nav-links li {
@@ -651,28 +640,12 @@ a {
         opacity: 1;
     }
 
-    .nav-links:not(.active) {
-        transition: clip-path 0.4s ease-out; /* 關閉動畫加快 */
-    }
-
-    .nav-links.show li {
-        opacity: 1;
-    }
-
     .header-content h1 {
         font-size: 5vmin;
     }
 
     .header-content h2 {
         font-size: 3vmin;
-    }
-
-    .country-grid, .tips-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .country-card {
-        height: 300px;
     }
 
     .footer-container {
@@ -686,17 +659,9 @@ a {
 }
 
 @media (max-width: 600px) {
-    .country-grid, .tips-grid {
+    .paris-gallery {
         max-width: 400px;
         margin: 30px auto;
-    }
-
-    .country-label h4 {
-        font-size: 1.35rem;
-    }
-
-    .country-desc, .country-info {
-        font-size: 0.95rem;
     }
 }
 

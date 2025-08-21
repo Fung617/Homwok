@@ -102,11 +102,29 @@ a {
     border: none;
     cursor: pointer;
     display: none;
+    position: relative;
+    z-index: 1002;
 }
 
 .menu-icon {
     width: 40px;
     height: 40px;
+    transition: opacity 0.3s;
+}
+
+.menu-icon.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon:not(.close) {
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon.close {
+    opacity: 1;
 }
 
 /* 主視覺區 */
@@ -593,23 +611,32 @@ a {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         background: rgba(0, 0, 0, 0.9);
-        clip-path: circle(0px at 90% -10%);
-        transition: all 0.8s ease-out;
+        clip-path: circle(0px at calc(100% - 60px) 20px);
+        transition: clip-path 0.8s ease-out;
         z-index: 999;
+        opacity: 1;
+        pointer-events: none;
     }
 
-    .nav-links.show {
-        clip-path: circle(1500px at 90% -10%);
+    .nav-links.active {
+        clip-path: circle(1500px at calc(100% - 60px) 20px);
+        pointer-events: auto;
+    }
+
+    /* 為關閉動畫加快速度 */
+    .nav-links:not(.active) {
+        transition: clip-path 0.4s ease-out;
     }
 
     .nav-links li {
         margin: 30px auto;
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: opacity 0.5s ease;
     }
 
-    .nav-links.show li {
+    .nav-links.active li {
         opacity: 1;
     }
 

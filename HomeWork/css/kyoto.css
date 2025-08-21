@@ -1,9 +1,8 @@
-/* 法國主題色 */
+/* 日本主題色 */
 :root {
-    --france-blue: #4682B4; /* 法國國旗藍色 */
-    --france-gold: #F5E050; /* 淡金色，代表巴黎奢華 */
-    --france-dark: #2e2e2e;
-    --france-light: #f5f5f5;
+    --japan-red: #FF5482; /* Updated to match provided navbar hover color */
+    --japan-dark: #2e2e2e;
+    --japan-beige: #f5f0e6;
 }
 
 /* 重置樣式 */
@@ -28,7 +27,7 @@ a {
 .ctn {
     display: inline-block;
     padding: 12px 30px;
-    background: var(--france-blue);
+    background: var(--japan-red);
     color: white;
     border-radius: 30px;
     font-weight: 600;
@@ -37,8 +36,8 @@ a {
 
 .ctn:hover {
     background: white;
-    color: var(--france-blue);
-    border: 2px solid var(--france-blue);
+    color: var(--japan-red);
+    border: 2px solid var(--japan-red);
     transform: translateY(-3px);
 }
 
@@ -53,7 +52,7 @@ a {
     padding: 20px;
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .logo-container {
@@ -88,11 +87,11 @@ a {
 }
 
 .nav-links a:hover {
-    color: var(--france-blue);
+    color: #FF5482; 
 }
 
 .nav-links .active a {
-    color: var(--france-blue);
+    color: #FF5482;
     font-weight: bold;
     text-decoration: underline;
 }
@@ -102,15 +101,33 @@ a {
     border: none;
     cursor: pointer;
     display: none;
+    position: relative;
+    z-index: 1002;
 }
 
 .menu-icon {
     width: 40px;
     height: 40px;
+    transition: opacity 0.3s;
+}
+
+.menu-icon.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon:not(.close) {
+    opacity: 0;
+}
+
+.menu-btn.active .menu-icon.close {
+    opacity: 1;
 }
 
 /* 主視覺區 */
-.paris-header {
+.japan-header {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -151,7 +168,7 @@ a {
 }
 
 .header-content .line {
-    background: var(--france-blue);
+    background: var(--japan-red);
     height: 4px;
     width: 60px;
     margin: 10px auto;
@@ -166,7 +183,7 @@ a {
     }
 }
 
-/* 關於巴黎 */
+/* 關於京都 */
 .about-section {
     padding: 80px 5%;
 }
@@ -178,11 +195,11 @@ a {
 
 .title-text {
     font-size: 2.5rem;
-    color: var(--france-dark);
+    color: var(--japan-dark);
 }
 
 .title .line {
-    background: var(--france-blue);
+    background: var(--japan-red);
     height: 4px;
     width: 80px;
     margin: 10px auto;
@@ -206,22 +223,22 @@ a {
 }
 
 .history-info-box {
-    background: var(--france-light);
+    background: var(--japan-beige);
     padding: 20px;
-    border-left: 4px solid var(--france-blue);
+    border-left: 4px solid var(--japan-red);
     margin: 30px 0;
     border-radius: 0 8px 8px 0;
     min-height: 150px;
 }
 
-.paris-gallery {
+.kyoto-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 30px;
 }
 
-.paris-image {
+.kyoto-image {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -229,7 +246,7 @@ a {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0, 85, 164, 0.2);
+    border: 1px solid rgba(255, 84, 130, 0.2); /* Updated to match --japan-red */
     transition: all 0.3s ease;
 }
 
@@ -241,11 +258,11 @@ a {
     transition: all 0.3s ease;
 }
 
-.paris-image:hover {
-    box-shadow: 0 12px 30px rgba(0, 85, 164, 0.15);
+.kyoto-image:hover {
+    box-shadow: 0 12px 30px rgba(255, 84, 130, 0.15);
 }
 
-.paris-image:hover .rounded-corner {
+.kyoto-image:hover .rounded-corner {
     transform: scale(1.05);
     filter: brightness(1.05);
 }
@@ -254,7 +271,7 @@ a {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: rgba(0, 85, 164, 0.85);
+    background: rgba(255, 84, 130, 0.85); /* Updated to match --japan-red */
     color: white;
     padding: 8px 15px;
     border-radius: 4px;
@@ -263,7 +280,7 @@ a {
 }
 
 @media (max-width: 992px) {
-    .paris-gallery {
+    .kyoto-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
     .row {
@@ -272,15 +289,32 @@ a {
 }
 
 @media (max-width: 576px) {
-    .paris-gallery {
+    .kyoto-gallery {
         grid-template-columns: 1fr;
     }
 }
 
 /* 文化體驗 */
 .culture-section {
-    background: var(--france-light, #f5f5f5);
+    background: var(--japan-beige, #f5f5f5);
     padding: 80px 5%;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    font-size: 2.5rem;
+    color: var(--japan-dark, #333);
+}
+
+.title .line {
+    background: var(--japan-red, #ff5482);
+    height: 4px;
+    width: 80px;
+    margin: 10px auto;
 }
 
 .culture-grid {
@@ -297,13 +331,13 @@ a {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--france-blue, #0055A4);
+    border-top: 4px solid var(--japan-red, #ff5482);
     transition: all 0.3s ease;
 }
 
 .culture-card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 30px rgba(0, 85, 164, 0.1);
+    box-shadow: 0 15px 30px rgba(255, 84, 130, 0.1);
 }
 
 .culture-image {
@@ -313,7 +347,7 @@ a {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 1px solid rgba(0, 85, 164, 0.2);
+    border: 1px solid rgba(255, 84, 130, 0.2);
     transition: all 0.3s ease;
     width: 200px;
     height: 200px;
@@ -321,7 +355,7 @@ a {
 }
 
 .culture-card:hover .culture-image {
-    box-shadow: 0 12px 30px rgba(0, 85, 164, 0.15);
+    box-shadow: 0 12px 30px rgba(255, 84, 130, 0.15);
 }
 
 .culture-image img.rounded-corner {
@@ -353,7 +387,7 @@ a {
 .ctn-small {
     display: inline-block;
     padding: 10px 25px;
-    background: var(--france-blue, #0055A4);
+    background: var(--japan-red, #ff5482);
     color: white;
     border-radius: 30px;
     font-size: 0.9rem;
@@ -363,8 +397,8 @@ a {
 
 .ctn-small:hover {
     background: white;
-    color: var(--france-blue, #0055A4);
-    border-color: var(--france-blue, #0055A4);
+    color: var(--japan-red, #ff5482);
+    border-color: var(--japan-red, #ff5482);
     transform: translateY(-3px);
 }
 
@@ -406,7 +440,7 @@ a {
 .pin {
     width: 20px;
     height: 20px;
-    background: var(--france-blue);
+    background: var(--japan-red);
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
 }
@@ -473,12 +507,12 @@ a {
 }
 
 .manual-events th {
-    background-color: var(--france-blue);
+    background-color: var(--japan-red);
     color: white;
 }
 
 .manual-events tr:hover {
-    background-color: #f5faff;
+    background-color: #fff9f9;
 }
 
 /* ================= Footer Section ================= */
@@ -515,7 +549,7 @@ a {
 
 .contact-info i {
     margin-right: 10px;
-    color: var(--france-blue);
+    color: #FF5482;
 }
 
 .social-icons {
@@ -538,7 +572,7 @@ a {
 }
 
 .social-icons a:hover {
-    background: var(--france-blue);
+    background: #FF5482;
     transform: translateY(-3px);
 }
 
@@ -558,7 +592,7 @@ a {
 }
 
 .newsletter button {
-    background: var(--france-blue);
+    background: #FF5482;
     color: white;
     border: none;
     padding: 0 15px;
@@ -568,7 +602,7 @@ a {
 }
 
 .newsletter button:hover {
-    background: #003e7a;
+    background: #e04a72;
 }
 
 .copyright {
@@ -593,20 +627,32 @@ a {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
+        align-items: center; /* 至中 */
         background: rgba(0, 0, 0, 0.9);
-        clip-path: circle(0px at 90% -10%);
-        transition: all 0.8s ease-out;
+        clip-path: circle(0px at calc(100% - 60px) 20px); /* 圓心對準 hamburger */
+        transition: clip-path 0.8s ease-out; /* 開啟動畫 */
         z-index: 999;
+        opacity: 1;
+        pointer-events: none;
     }
 
-    .nav-links.show {
-        clip-path: circle(1500px at 90% -10%);
+    .nav-links.active {
+        clip-path: circle(1500px at calc(100% - 60px) 20px);
+        pointer-events: auto;
     }
 
     .nav-links li {
         margin: 30px auto;
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: opacity 0.5s ease;
+    }
+
+    .nav-links.active li {
+        opacity: 1;
+    }
+
+    .nav-links:not(.active) {
+        transition: clip-path 0.4s ease-out; /* 關閉動畫加快 */
     }
 
     .nav-links.show li {
@@ -621,6 +667,14 @@ a {
         font-size: 3vmin;
     }
 
+    .country-grid, .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .country-card {
+        height: 300px;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -632,9 +686,17 @@ a {
 }
 
 @media (max-width: 600px) {
-    .paris-gallery {
+    .country-grid, .tips-grid {
         max-width: 400px;
         margin: 30px auto;
+    }
+
+    .country-label h4 {
+        font-size: 1.35rem;
+    }
+
+    .country-desc, .country-info {
+        font-size: 0.95rem;
     }
 }
 

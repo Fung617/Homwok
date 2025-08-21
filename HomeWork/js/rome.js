@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 顯示歷史介紹
+    // 移動端菜單切換
+    function toggleMenu() {
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuBtn && navLinks) {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+    }
+
+    // 其他原來功能（例如 showHistory、updateYear）保留
     function showHistory(title, content) {
         const titleElement = document.getElementById('history-title');
         const contentElement = document.getElementById('history-content');
@@ -15,15 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 移動端菜單切換
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        if (navLinks) {
-            navLinks.classList.toggle('active');
-        }
-    }
-
-    // 更新年份
     function updateYear() {
         const yearElement = document.getElementById('current-year');
         if (yearElement) {
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 動態設置活躍導航鏈接
     function setActiveLink() {
         const navLinks = document.querySelectorAll('.nav-links a');
         const currentPath = window.location.pathname.toLowerCase();
@@ -60,6 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     init();
 
-    // 暴露 showHistory 給全局（供 HTML onclick 使用）
+    // 暴露 showHistory 給全局
     window.showHistory = showHistory;
 });
