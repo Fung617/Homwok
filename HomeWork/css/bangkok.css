@@ -1,7 +1,7 @@
 /* 泰國主題色 */
 :root {
-    --thailand-blue: #2F3E9E; /* 泰國國旗藍色 */
-    --thailand-red: #A51931; /* 泰國國旗紅色，代表熱情 */
+    --thailand-blue: #2F3E9E;
+    --thailand-red: #A51931; 
     --thailand-dark: #2e2e2e;
     --thailand-light: #f5f5f5;
 }
@@ -18,7 +18,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Prevent content from being hidden under fixed navbar */
+    padding-top: 60px;
 }
 
 a {

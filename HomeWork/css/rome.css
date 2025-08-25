@@ -1,12 +1,11 @@
-/* 意大利主題色（參考國旗） */
 :root {
-    --italy-green: #008C45; /* 國旗綠色 */
-    --italy-red: #CD212A; /* 國旗紅色 */
-    --italy-white: #F8F8FF; /* 國旗白色 */
-    --italy-dark: #2E2E2E; /* 深灰色 */
+    --italy-green: #008C45; 
+    --italy-red: #CD212A; 
+    --italy-white: #F8F8FF; 
+    --italy-dark: #2E2E2E; 
 }
 
-/* 重置樣式 */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Prevent content from being hidden under fixed navbar */
+    padding-top: 60px; 
 }
 
 a {

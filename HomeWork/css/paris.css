@@ -1,7 +1,7 @@
 /* 法國主題色 */
 :root {
-    --france-blue: #4682B4; /* 法國國旗藍色 */
-    --france-gold: #F5E050; /* 淡金色，代表巴黎奢華 */
+    --france-blue: #4682B4; 
+    --france-gold: #F5E050;
     --france-dark: #2e2e2e;
     --france-light: #f5f5f5;
 }
@@ -18,7 +18,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Prevent content from being hidden under fixed navbar */
+    padding-top: 60px; 
 }
 
 a {

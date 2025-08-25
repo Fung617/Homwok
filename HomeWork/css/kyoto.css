@@ -1,6 +1,6 @@
 /* 日本主題色 */
 :root {
-    --japan-red: #FF5482; /* Updated to match provided navbar hover color */
+    --japan-red: #FF5482; 
     --japan-dark: #2e2e2e;
     --japan-beige: #f5f0e6;
 }
@@ -17,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    padding-top: 60px; /* Prevent content from being hidden under fixed navbar */
+    padding-top: 60px;
 }
 
 a {
@@ -266,7 +266,7 @@ a {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255, 84, 130, 0.2); /* Updated to match --japan-red */
+    border: 1px solid rgba(255, 84, 130, 0.2); 
     transition: all 0.3s ease;
 }
 
@@ -291,7 +291,7 @@ a {
     position: absolute;
     left: 20px;
     bottom: 20px;
-    background: rgba(255, 84, 130, 0.85); /* Updated to match --japan-red */
+    background: rgba(255, 84, 130, 0.85); 
     color: white;
     padding: 8px 15px;
     border-radius: 4px;
@@ -647,10 +647,10 @@ a {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
-        align-items: center; /* 至中 */
+        align-items: center; 
         background: rgba(0, 0, 0, 0.9);
-        clip-path: circle(0px at calc(100% - 60px) 20px); /* 圓心對準 hamburger */
-        transition: clip-path 0.8s ease-out; /* 開啟動畫 */
+        clip-path: circle(0px at calc(100% - 60px) 20px); 
+        transition: clip-path 0.8s ease-out; 
         z-index: 999;
         opacity: 1;
         pointer-events: none;
@@ -672,7 +672,7 @@ a {
     }
 
     .nav-links:not(.active) {
-        transition: clip-path 0.4s ease-out; /* 關閉動畫加快 */
+        transition: clip-path 0.4s ease-out; 
     }
 
     .nav-links.show li {
